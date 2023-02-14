@@ -9,26 +9,26 @@ from bertopic.representation._base import BaseRepresentation
 
 
 DEFAULT_PROMPT = """
-This is a list of texts where each collection of texts describe a topic. After each collection of texts, the name of the topic they represent is mentioned as a short-highly-descriptive title
+Voici une liste de textes où chaque collection de textes décrit un topic. Après chaque collection de textes, le nom du topic qu'ils représentent est mentionné en tant que titre court et hautement descriptif.
+
+Topic:
+Sample texts from this topic:
+- Les régimes traditionnels dans la plupart des cultures étaient principalement à base de plantes avec un peu de viande en plus, mais avec l'essor de la production de viande de style industriel et de l'élevage en usine, la viande est devenue un aliment de base.
+- La viande, mais surtout le boeuf, est le mot aliment en termes d'émissions.
+- Manger de la viande ne vous rend pas une mauvaise personne, ne pas manger de viande ne vous rend pas une bonne personne.
+
+Keywords: viande boeuf manger manger émissions steak nourriture santé transformé poulet
+Topic name: Impacts environnementaux de la consommation de viande
 ---
 Topic:
 Sample texts from this topic:
-- Traditional diets in most cultures were primarily plant-based with a little meat on top, but with the rise of industrial style meat production and factory farming, meat has become a staple food.
-- Meat, but especially beef, is the word food in terms of emissions.
-- Eating meat doesn't make you a bad person, not eating meat doesn't make you a good one.
+- J'ai commandé le produit il y a des semaines, mais il n'est toujours pas arrivé!
+- Le site mentionne qu'il ne faut que quelques jours pour livrer, mais je n'ai toujours rien reçu.
+- J'ai reçu un message indiquant que j'ai reçu le moniteur, mais ce n'est pas vrai!
+- Il a fallu un mois de plus pour livrer que ce qui était conseillé...
 
-Keywords: meat beef eat eating emissions steak food health processed chicken
-Topic name: Environmental impacts of eating meat
----
-Topic:
-Sample texts from this topic:
-- I have ordered the product weeks ago but it still has not arrived!
-- The website mentions that it only takes a couple of days to deliver but I still have not received mine.
-- I got a message stating that I received the monitor but that is not true!
-- It took a month longer to deliver than was advised...
-
-Keywords: deliver weeks product shipping long delivery received arrived arrive week
-Topic name: Shipping and delivery issues
+Keywords: livreur semaines produit expédition longue livraison reçu arrivé arriver semaine
+Topic name: Problèmes d'expédition et de livraison
 ---
 """
 
