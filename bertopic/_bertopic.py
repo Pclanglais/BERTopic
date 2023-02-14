@@ -344,6 +344,7 @@ class BERTopic:
             embeddings = self._extract_embeddings(documents.Document,
                                                   method="document",
                                                   verbose=self.verbose)
+            original_embeddings = embeddings
             logger.info("Transformed documents to Embeddings")
         else:
             if self.embedding_model is not None:
@@ -376,7 +377,7 @@ class BERTopic:
         self.probabilities_ = self._map_probabilities(probabilities, original_topics=True)
         predictions = documents.Topic.to_list()
 
-        return predictions, self.probabilities_
+        return predictions, self.probabilities_, original_embeddings
 
     def transform(self,
                   documents: Union[str, List[str]],
