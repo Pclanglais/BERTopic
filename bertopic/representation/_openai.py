@@ -119,7 +119,7 @@ class OpenAI(BaseRepresentation):
             response = openai.Completion.create(model=self.model, prompt=prompt, **self.generator_kwargs)
             label = response["choices"][0]["text"].strip()
             updated_topics[topic] = [(label, 1)] + [("", 0) for _ in range(9)]
-            time.sleep(1.5)
+            time.sleep(3)
 
         return updated_topics
 
