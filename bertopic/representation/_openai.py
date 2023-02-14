@@ -1,6 +1,7 @@
 import openai
 import numpy as np
 import pandas as pd
+import time
 from scipy.sparse import csr_matrix
 from typing import Mapping, List, Tuple, Union, Any
 from sklearn.metrics.pairwise import cosine_similarity
@@ -118,6 +119,7 @@ class OpenAI(BaseRepresentation):
             response = openai.Completion.create(model=self.model, prompt=prompt, **self.generator_kwargs)
             label = response["choices"][0]["text"].strip()
             updated_topics[topic] = [(label, 1)] + [("", 0) for _ in range(9)]
+            time.sleep(1.5)
 
         return updated_topics
 
